@@ -38,7 +38,9 @@ uint8_t fontset[FONTSET_SIZE] = {
 // randGen part is from austinmorlan
 Chip8::Chip8() : randGen( std::chrono::system_clock::now().time_since_epoch().count() ) {
 	// Initalize
+	memset(video, 0, sizeof(video));
 	memset(memory, 0, sizeof(memory));
+	//memory = malloc(0x100000); //c-style
 	memset(V, 0, sizeof(V));
 	memset(stack, 0, sizeof(stack));
 	memset(keypad, 0, sizeof(keypad));

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="roms">
+      <UniqueIdentifier>{983adb7e-3bf2-4c01-8ab1-ce55f9ca1dc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -32,5 +35,24 @@
     <ClInclude Include="Platform.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="roms\pong.ch8">
+      <Filter>roms</Filter>
+    </None>
+    <None Include="roms\test.ch8">
+      <Filter>roms</Filter>
+    </None>
+    <None Include="roms\breakout.ch8">
+      <Filter>roms</Filter>
+    </None>
+    <None Include="roms\invaders.ch8">
+      <Filter>roms</Filter>
+    </None>
+    <None Include="roms\tetris.ch8">
+      <Filter>roms</Filter>
+    </None>
+    <None Include=".gitignore" />
+    <None Include=".gitattributes" />
   </ItemGroup>
 </Project>

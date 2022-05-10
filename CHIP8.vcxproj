@@ -142,7 +142,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -154,6 +154,15 @@
   <ItemGroup>
     <ClInclude Include="CPU.hpp" />
     <ClInclude Include="Platform.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="roms\breakout.ch8" />
+    <None Include="roms\invaders.ch8" />
+    <None Include="roms\pong.ch8" />
+    <None Include="roms\test.ch8" />
+    <None Include="roms\tetris.ch8" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,8 +13,7 @@ int main(int argc, char** argv) {
 
 	int vScale = 15;
 	int cycleDelay = 1000;
-	//char const* romFilename = "pong.ch8";
-	char const* romFilename = "test.ch8";
+	char const* romFilename = "roms/test.ch8";
 #else	
 	if (argc != 4) {
 		std::cerr << "Usage: " << argv[0] << " <Scale> <Delay> <ROM>\n";
