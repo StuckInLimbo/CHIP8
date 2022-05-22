@@ -1,18 +1,25 @@
 #include "CPU.hpp"
 #include "Platform.hpp"
+#include "DbgScr.hpp"
 #include <cstdio>
 #include <iostream>
 #include <string>
 #include <chrono>
 
+#ifdef _DEBUG
+#include "DbgScr.hpp"
+#endif
+
 bool quit = false;
 
 int main(int argc, char** argv) {
 #ifdef _DEBUG
-	//AllocConsole();
+	//Create debug window
+	DebugWindow dw;
+	dw.CreateWindow(300, 600);
 
 	int vScale = 15;
-	int cycleDelay = 1000;
+	int cycleDelay = 800;
 	char const* romFilename = "roms/test.ch8";
 #else	
 	if (argc != 4) {
@@ -48,6 +55,9 @@ int main(int argc, char** argv) {
 
 			chip8.RunCycle();
 
+			#ifdef _DEBUG
+			dw.PrintInfo(&chip8);
+			#endif
 			platform.Update(chip8.video, pitch);
 		}
 	}

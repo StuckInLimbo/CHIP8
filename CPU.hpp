@@ -26,6 +26,21 @@ public:
 	// Input
 	uint8_t keypad[KEY_COUNT];
 
+	// Memory
+	unsigned char memory[MEMORY_SIZE];
+
+	// Registers
+	uint16_t opcode;
+	uint8_t V[REGISTER_COUNT];
+	uint16_t I;
+	uint16_t pc;
+	uint16_t sp;
+	uint16_t stack[STACK_LEVELS];
+
+	// Timers
+	uint8_t delayTimer;
+	uint8_t soundTimer;
+
 private:
 	// Function Pointer Tables
 	void Table0();
@@ -108,20 +123,6 @@ private:
 	void OP_Fx65(); 
 #pragma endregion
 
-	// Memory
-	unsigned char memory[MEMORY_SIZE];
-
-	// Registers
-	uint16_t opcode;
-	uint8_t V[REGISTER_COUNT];
-	uint16_t I;
-	uint16_t pc;
-	uint16_t sp;
-	uint16_t stack[STACK_LEVELS];
-
-	// Timers
-	uint8_t delayTimer;
-	uint8_t soundTimer;
 
 	// RNG member vars
 	std::default_random_engine randGen;

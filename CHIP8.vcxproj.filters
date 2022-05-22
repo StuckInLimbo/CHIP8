@@ -27,12 +27,18 @@
     <ClCompile Include="Platform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DbgScr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Platform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgScr.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
