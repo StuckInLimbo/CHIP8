@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 #ifdef _DEBUG
 	//Create debug window
 	DebugWindow dw;
-	dw.CreateWindow(300, 600);
+	dw.CreateDebugWindow(300, 600);
 
 	int vScale = 15;
 	int cycleDelay = 800;

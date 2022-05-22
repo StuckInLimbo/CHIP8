@@ -9,7 +9,7 @@ class DebugWindow {
 public:
 	DebugWindow();
 	~DebugWindow();
-	void CreateWindow(int width, int height);
+	void CreateDebugWindow(int width, int height);
 	void PrintInfo(Chip8* chip8);
 private:
 	SDL_Window* dbgWin;
