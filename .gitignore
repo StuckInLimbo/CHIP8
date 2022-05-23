@@ -348,4 +348,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-/SDL2-2*
+
+# Submodules
+imgui/
+SDL/
+glew/
