@@ -1,12 +1,12 @@
 [submodule "imgui"]
 	path = imgui
 	url = https://github.com/ocornut/imgui
+	ignore = dirty
 [submodule "SDL"]
 	path = SDL
 	url = https://github.com/libsdl-org/SDL
-[submodule "GLEW"]
-	path = GLEW
-	url = https://github.com/nigels-com/glew
+	ignore = dirty
 [submodule "glew"]
 	path = glew
 	url = https://github.com/nigels-com/glew
+	ignore = dirty
