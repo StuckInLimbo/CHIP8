@@ -1,11 +1,8 @@
 #include <SDL.h>
-//#include <SDL_ttf.h>
 #include "DbgScr.hpp"
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_dx9.h"
 #include "imgui/imgui_impl_sdl.h"
-
-//TTF_Font* gFont = NULL;
 
 DebugWindow::DebugWindow() {
 	dbgWin = NULL;
@@ -22,14 +19,10 @@ DebugWindow::~DebugWindow() {
 	ImGui_ImplDX9_Shutdown();
 	ImGui_ImplSDL2_Shutdown();
 	ImGui::DestroyContext();
-	//TTF_Quit();
-	//SDL_Quit();
 }
 
 void DebugWindow::CreateDebugWindow(int width, int height) {
 	SDL_Init(SDL_INIT_VIDEO);
-	//TTF_Init();
-	//gFont = TTF_OpenFont("C:\\Windows\\Fonts\\tahoma.ttf", 30);
 	dbgWin = SDL_CreateWindow("CHIP8 Debug", 1200, 30, width, height, SDL_WINDOW_SHOWN);
 	dbgRend = SDL_CreateRenderer(dbgWin, -1, SDL_RENDERER_ACCELERATED);
 	dbgTex = SDL_CreateTexture(dbgRend, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, width, height);
@@ -46,9 +39,6 @@ void DebugWindow::CreateDebugWindow(int width, int height) {
 	//ImGui_ImplOpenGL3_Init();
 	ImGui_ImplSDL2_InitForD3D(dbgWin);
 	ImGui_ImplDX9_Init(SDL_RenderGetD3D9Device(dbgRend));
-	ImGui_ImplDX9_NewFrame();
-	ImGui_ImplSDL2_NewFrame(dbgWin);
-	ImGui::NewFrame();
 	SDL_RenderPresent(dbgRend);
 }
 
