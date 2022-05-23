@@ -1,9 +1,6 @@
 #pragma once
 #include "CPU.hpp"
-
-class SDL_Window;
-class SDL_Renderer;
-class SDL_Texture;
+#include <SDL.h>
 
 class DebugWindow {
 public:
@@ -15,4 +12,5 @@ private:
 	SDL_Window* dbgWin;
 	SDL_Renderer* dbgRend;
 	SDL_Texture* dbgTex;
+	SDL_GLContext dbgCtx;
 };
